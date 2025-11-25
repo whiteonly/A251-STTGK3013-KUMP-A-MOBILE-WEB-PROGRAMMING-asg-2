@@ -234,7 +234,7 @@ class _registerScreenState extends State<registerScreen> {
       return;
     }
     // Phone number validation more than 7 - 10 digits and only numbers are allowed
-    if(phone.length > 7 && phone.length < 10 &&  !RegExp(r'^[0-9]+$').hasMatch(phone)) {
+    if( !RegExp(r'^[0-9]+$').hasMatch(phone)) {
       SnackBar snackBar = const SnackBar(
         content: Text('Please enter a valid phone number'),
       );
